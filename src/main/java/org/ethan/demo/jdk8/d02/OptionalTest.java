@@ -12,6 +12,8 @@ public class OptionalTest {
     public static void main(String[] args) {
         //有三种构造方法, of(),empty(),ofNullable()
         Optional<String> optional = Optional.ofNullable("Hello");
+
+        //不建议这样写,因为这样与与之前判断为null是没有区别的
         if (optional.isPresent()) {
             System.out.println(optional.get());
         }
