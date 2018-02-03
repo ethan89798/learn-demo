@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-21 10:43
+ *
  */
 public class PredicateTest {
     public static void main(String[] args) {

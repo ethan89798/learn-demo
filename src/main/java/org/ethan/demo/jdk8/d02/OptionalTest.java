@@ -5,8 +5,6 @@ import java.util.Optional;
 /**
  * Optional不要作为方法的参数或类的成员变量, 因为Optional设计上只是作为方法的返回值,并且没有实现序列化的,
  * Optional只作为方法的返回值使用.
- * @author Ethan Huang
- * @since 2018-01-28 22:34
  */
 public class OptionalTest {
     public static void main(String[] args) {

@@ -4,8 +4,6 @@ import java.util.function.Supplier;
 
 /**
  *
- * @author Ethan Huang
- * @since 2018-01-25 20:06
  */
 public class SupplierTest {
     public static void main(String[] args) {

@@ -6,8 +6,6 @@ import java.util.function.BinaryOperator;
 
 /**
  *
- * @author Ethan Huang
- * @since 2018-01-25 22:19
  */
 public class BinaryOpertorTest {
 

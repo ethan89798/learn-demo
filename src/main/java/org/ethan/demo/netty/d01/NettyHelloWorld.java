@@ -11,8 +11,6 @@ import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 /**
  * Netty作为Http开发主要考虑的是http的路由和业务逻辑
- * @author Ethan Huang
- * @since 2018-01-21 12:28
  */
 public class NettyHelloWorld {
     public static void main(String[] args) {

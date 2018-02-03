@@ -1,8 +1,7 @@
 package org.ethan.demo.jdk8.d01;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-20 22:21
+ *
  */
 public class LambdaTest02 {
 

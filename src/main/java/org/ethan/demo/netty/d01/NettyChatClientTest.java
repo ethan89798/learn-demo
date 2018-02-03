@@ -17,9 +17,6 @@ import java.io.InputStreamReader;
 
 /**
  * 模拟多人聊天的客户端
- *
- * @author Ethan Huang
- * @since 2018-01-21 19:13
  */
 public class NettyChatClientTest {
     public static void main(String[] args) {

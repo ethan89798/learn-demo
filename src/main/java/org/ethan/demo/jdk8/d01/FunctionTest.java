@@ -4,8 +4,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-21 00:37
+ *
  */
 public class FunctionTest {
 

@@ -1,8 +1,7 @@
 package org.ethan.demo.jdk8.d02;
 
 /**
- * @author Ethan Huang
- * @since 2018-02-01 22:50
+ *
  */
 public class DefaultMethodTest1 implements MyInterface1, MyInterface2 {
     /**

@@ -12,8 +12,6 @@ import io.netty.handler.timeout.IdleStateHandler;
 
 /**
  * 程序心跳,进行确保连接的通信,及时清理后台已经掉弃的连接
- * @author Ethan Huang
- * @since 2018-01-21 21:22
  */
 public class NettyIdleServerTest {
     public static void main(String[] args) {

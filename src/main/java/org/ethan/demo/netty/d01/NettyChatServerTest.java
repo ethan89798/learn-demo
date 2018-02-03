@@ -16,8 +16,6 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 
 /**
  * 模拟多人聊天的通信服务器
- * @author Ethan Huang
- * @since 2018-01-21 16:54
  */
 public class NettyChatServerTest {
 

@@ -6,8 +6,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-31 22:20
+ *
  */
 public class MethodReferenceTest {
     public static void main(String[] args) {

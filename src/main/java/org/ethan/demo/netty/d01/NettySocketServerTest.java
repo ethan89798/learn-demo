@@ -14,8 +14,7 @@ import io.netty.util.CharsetUtil;
 import java.util.UUID;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-21 13:51
+ *
  */
 public class NettySocketServerTest {
 

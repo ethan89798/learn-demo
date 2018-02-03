@@ -6,8 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-21 00:19
+ *
  */
 public class StringComparator {
 

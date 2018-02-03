@@ -14,8 +14,7 @@ import io.netty.util.CharsetUtil;
 import java.time.Instant;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-21 14:05
+ *
  */
 public class NettySocketClientTest {
 

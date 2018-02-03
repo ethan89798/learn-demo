@@ -6,8 +6,7 @@ import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
 /**
- * @author Ethan Huang
- * @since 2018-01-21 10:24
+ *
  */
 public class PersonTest {
 
