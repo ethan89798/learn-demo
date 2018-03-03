@@ -1,7 +1,5 @@
 package org.ethan.demo.jdk8.d03;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -34,6 +32,9 @@ public class StreamGroupTest {
         Map<Integer, Long> map3 = students.stream().collect(Collectors.groupingBy(Student::getAge, Collectors.summingLong(Student::getSorce)));
         System.out.println(map3);
 
+        //先根据名字进行分组，再根据年轮进行分组
+        Map<String, Map<Integer, List<Student>>> groupMap = students.stream().collect(Collectors.groupingBy(Student::getName, Collectors.groupingBy(Student::getAge)));
+        System.out.println(groupMap);
 
         System.out.println("group by end");
 
@@ -43,6 +44,7 @@ public class StreamGroupTest {
 
         System.out.println("================");
 
+        //分区下再分区
         Map<Boolean, Map<Boolean, List<Student>>> map5 = students.stream().collect(Collectors.partitioningBy(stu -> stu.getAge() > 13, Collectors.partitioningBy(stu2 -> stu2.getSorce() > 80)));
         System.out.println(map5);
     }
@@ -59,6 +61,10 @@ class Student {
         this.age = age;
     }
 
+    /**
+     * {@link #getSorce()}
+     * @return
+     */
     public String getName() {
         return name;
     }
