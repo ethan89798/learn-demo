@@ -88,7 +88,8 @@ public class CustomizeClassLoader extends ClassLoader {
         System.out.println("========");
 
 
-        CustomizeClassLoader loader2 = new CustomizeClassLoader(ClassLoader.getSystemClassLoader(), "My first ClassLoader");
+//        CustomizeClassLoader loader2 = new CustomizeClassLoader(ClassLoader.getSystemClassLoader(), "My first ClassLoader");
+        CustomizeClassLoader loader2 = new CustomizeClassLoader(loader, "My first ClassLoader");
 //        loader.testLoader(loader);
 
         loader2.setPath("/home/ethan/Desktop/");
@@ -98,7 +99,7 @@ public class CustomizeClassLoader extends ClassLoader {
         System.out.println(object2);
         System.out.println(object2.getClass().getClassLoader());
 
-
+        System.out.println("=======");
     }
 
     public void testLoader(ClassLoader classLoader) throws Exception {
