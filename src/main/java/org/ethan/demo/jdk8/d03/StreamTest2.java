@@ -15,6 +15,7 @@ public class StreamTest2 {
         System.out.println("=========");
         List<Integer> list = Arrays.asList(3, 4, 5, 6, 7);
         list.stream().map(v -> v * 2).reduce(Integer::sum).ifPresent(System.out::println);
+//        list.stream().map(v -> v * 2).reduce(itme -> itme += itme + "").ifPresent(System.out::println);
         System.out.println(list.stream().mapToInt(v -> v * 2).sum());
 
 
