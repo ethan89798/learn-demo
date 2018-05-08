@@ -51,7 +51,14 @@ public class StreamTest3 {
         Stream<Integer> stream2 = Stream.iterate(1, item -> item + 2).limit(6);
 //        OptionalInt optional = stream2.filter(item -> item > 2).mapToInt(item -> item * 2).skip(2).limit(2).reduce(Integer::sum);
 //        optional.ifPresent(System.out::println);
-        int sum = stream2.filter(item -> item > 2).mapToInt(item -> item * 2).skip(2).limit(2).sum();
-        System.out.println(sum);
+//        int sum = .sum();
+//        System.out.println(sum);
+
+
+        IntSummaryStatistics summaryStatistics = stream2.filter(item -> item > 2).mapToInt(item -> item * 2).skip(2).limit(2).summaryStatistics();
+        System.out.println(summaryStatistics.getMax());
+        System.out.println(summaryStatistics.getMin());
+        System.out.println(summaryStatistics.getSum());
+
     }
 }
