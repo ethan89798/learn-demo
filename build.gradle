@@ -30,7 +30,10 @@ dependencies {
             "io.netty:netty-all:4.1.19.Final",
             "org.apache.kafka:kafka-clients:1.0.0",
             "mysql:mysql-connector-java:5.1.46",
+<<<<<<< HEAD
             "org.springframework.kafka:spring-kafka:2.1.4.RELEASE",
+=======
+>>>>>>> 37b38444bf81198ee27a93f508c5c1f83e59a585
             "org.apache.hadoop:hadoop-client:2.8.4"
     )
     testCompile (

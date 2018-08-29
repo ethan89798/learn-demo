@@ -17,12 +17,13 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+	<!-- 配置hdfs数据副本数,单机节配置一份数据,默认为3个 -->
 	<property>
-		<name>dfs.replication</name>
-		<value>1</value>
-	</property>
-	<property>
-		<name>hadoop.tmp.dir</name>
-		<value>/opt/software/hadoop-2.8.4/tmp</value>
-	</property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.permissions</name>
+        <value>false</value>
+    </property>
 </configuration>

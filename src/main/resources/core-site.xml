@@ -21,8 +21,8 @@
         <name>fs.defaultFS</name>
         <value>hdfs://hadoop186:9000</value>
     </property>
-    <property>
-        <name>fs.permissions.umask-mode</name>
-        <value>002</value>
+	<property>
+        <name>hadoop.tmp.dir</name>
+        <value>/opt/software/hadoop-2.8.4/tmp</value>
     </property>
 </configuration>

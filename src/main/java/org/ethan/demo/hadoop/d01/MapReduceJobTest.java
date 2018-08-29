@@ -34,7 +34,7 @@ public class MapReduceJobTest {
         job.setJarByClass(MapReduceJobTest.class);
 
         FileInputFormat.addInputPath(job, inPath);
-        job.setMapperClass(WordCountMapper.class);
+        job.setMapperClass(WordCountJobMapper.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
         //设置排序
@@ -44,7 +44,7 @@ public class MapReduceJobTest {
         //设置压缩
 //        job.setCombinerClass();
 
-        job.setReducerClass(WordCountReducer.class);
+        job.setReducerClass(WordCountJobReducer.class);
         FileOutputFormat.setOutputPath(job, outPath);
 
         job.waitForCompletion(true);
@@ -52,19 +52,22 @@ public class MapReduceJobTest {
     }
 }
 
-class WordCountMapper extends Mapper<Text, IntWritable, Text, IntWritable> {
+class WordCountJobMapper extends Mapper<Text, IntWritable, Text, IntWritable> {
+    private static final Text textKey = new Text();
     private static final IntWritable WRITABLE = new IntWritable(1);
     @Override
     protected void map(Text key, IntWritable value, Context context) throws IOException, InterruptedException {
         StringTokenizer tokenizer = new StringTokenizer(key.toString());
         while (tokenizer.hasMoreTokens()) {
             String k = tokenizer.nextToken();
-            context.write(new Text(k), WRITABLE);
+            textKey.set(k);
+            context.write(textKey, WRITABLE);
         }
     }
 }
 
-class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+class WordCountJobReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+    private IntWritable writable = new IntWritable();
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
         int sum = 0;
@@ -72,6 +75,7 @@ class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
         while (iterator.hasNext()) {
             sum += iterator.next().get();
         }
-        context.write(key, new IntWritable(sum));
+        writable.set(sum);
+        context.write(key, writable);
     }
 }

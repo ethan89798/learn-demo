@@ -16,7 +16,7 @@ import java.io.IOException;
  * @author Ethan Huang
  * @since 2018/08/29
  */
-public class HDFSTest {
+public class CompanyHDFSTest {
 
     public static void main(String[] args) {
 
