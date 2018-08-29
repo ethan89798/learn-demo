@@ -1,4 +1,4 @@
-package org.ethan.demo.kafka;
+package org.ethan.demo.kafka.apache;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
