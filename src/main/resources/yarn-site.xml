@@ -25,4 +25,20 @@
         <name>yarn.nodemanager.aux-services</name>
         <value>mapreduce_shuffle</value>
     </property>
+
+    <property>
+        <name>yarn.log-aggregation-enable</name>
+        <value>true</value>
+        <description>
+            开启聚集日志
+        </description>
+    </property>
+    <property>
+        <name>yarn.log-aggregation.retain-seconds</name>
+        <value>86400</value>
+        <description>
+            日志文件保存在文件系统的最长时间,默认值为-1,即永久有久; 60*60*24*1这里配置是一天
+        </description>
+    </property>
+
 </configuration>

@@ -3,6 +3,7 @@ package org.ethan.demo.hadoop.d01;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -52,12 +53,12 @@ public class MapReduceJobTest {
     }
 }
 
-class WordCountJobMapper extends Mapper<Text, IntWritable, Text, IntWritable> {
+class WordCountJobMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
     private static final Text textKey = new Text();
     private static final IntWritable WRITABLE = new IntWritable(1);
     @Override
-    protected void map(Text key, IntWritable value, Context context) throws IOException, InterruptedException {
-        StringTokenizer tokenizer = new StringTokenizer(key.toString());
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        StringTokenizer tokenizer = new StringTokenizer(value.toString());
         while (tokenizer.hasMoreTokens()) {
             String k = tokenizer.nextToken();
             textKey.set(k);

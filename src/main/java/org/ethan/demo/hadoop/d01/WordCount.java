@@ -47,13 +47,13 @@ public class WordCount {
         //设置输入目录
         FileInputFormat.addInputPath(job, new Path(in));
         //设置map操作类
-        job.setMapperClass(WordCountJobMapper.class);
+        job.setMapperClass(WordCountMapper.class);
         //设置Map结果的key和value的类型
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
 
         //设置Reduce操作类
-        job.setReducerClass(WordCountJobReducer.class);
+        job.setReducerClass(WordCountReducer.class);
         //设置输出目录
         FileOutputFormat.setOutputPath(job, new Path(out));
 
