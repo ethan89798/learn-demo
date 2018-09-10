@@ -31,7 +31,8 @@ dependencies {
             "org.apache.kafka:kafka-clients:1.0.0",
             "mysql:mysql-connector-java:5.1.46",
             "org.springframework.kafka:spring-kafka:2.1.4.RELEASE",
-            "org.apache.hadoop:hadoop-client:2.8.4"
+            "org.apache.hadoop:hadoop-client:2.8.4",
+            "org.apache.zookeeper:zookeeper:3.4.13"
     )
     testCompile (
             "junit:junit:4.12"
