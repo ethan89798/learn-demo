@@ -34,6 +34,9 @@ dependencies {
             "org.apache.hadoop:hadoop-client:2.8.4",
             "org.apache.zookeeper:zookeeper:3.4.13"
     )
+    compile ("org.apache.storm:storm-core:1.2.2") {
+        exclude group: "org.slf4j"
+    }
     testCompile (
             "junit:junit:4.12"
     )
