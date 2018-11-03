@@ -7,8 +7,6 @@ import java.util.Map;
 
 /**
  * 自定义进行分区数据归类
- * @author Ethan Huang
- * @since 2018-11-03 15:08
  */
 public class CustomPartitioner implements Partitioner {
 

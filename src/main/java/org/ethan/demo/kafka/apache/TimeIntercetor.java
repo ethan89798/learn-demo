@@ -7,8 +7,7 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 import java.util.Map;
 
 /**
- * @author Ethan Huang
- * @since 2018-11-03 20:45
+ *
  */
 public class TimeIntercetor implements ProducerInterceptor<String, String> {
 

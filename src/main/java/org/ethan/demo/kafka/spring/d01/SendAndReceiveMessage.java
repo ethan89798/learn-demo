@@ -22,9 +22,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 使用spring kafka发送和接收消息
- *
- * @author Ethan Huang
- * @since 2018/07/25
  */
 public class SendAndReceiveMessage {
 
