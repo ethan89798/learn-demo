@@ -10,11 +10,11 @@ tasks.withType(JavaCompile){
     options.encoding="UTF-8"
 }
 
-jar {
-    manifest {
-        attributes "Main-Class":"org.ethan.demo.hadoop.d01.MapReduceJobTest"
-    }
-}
+//jar {
+//    manifest {
+//        attributes "Main-Class":"org.ethan.demo.hadoop.d01.MapReduceJobTest"
+//    }
+//}
 
 repositories {
     //国内比较好的maven仓库

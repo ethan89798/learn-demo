@@ -10,10 +10,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-/**
- * @author Ethan Huang
- * @since 2018/09/04
- */
 public class ZookeeperClientTest {
     private static Logger logger = LoggerFactory.getLogger(ZookeeperClientTest.class);
 
