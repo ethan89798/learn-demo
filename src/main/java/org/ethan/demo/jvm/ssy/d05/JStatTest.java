@@ -30,8 +30,17 @@ package org.ethan.demo.jvm.ssy.d05;
  * 	GC.heap_dump 查看JVM的堆信息(与jmap命令相同),可以通过jvisualvm查看
  * 	VM.system_properties 查看JVM的属性信息
  *
+ * jstack 可以查看线程堆栈信息
+ *
+ * jmc
+ *
+ * jhat
+ *
+ *
+ *
  */
 public class JStatTest {
+
     public static void main(String[] args) {
         for (; ; ) {
             System.out.println("hello");
