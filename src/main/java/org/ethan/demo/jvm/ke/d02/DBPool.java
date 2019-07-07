@@ -5,7 +5,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 简单实现连接池
+ * wait(),notifyAll()实现连接池
+ * fork-join
+ * CountDownLatch
+ * CyclicBarrier
+ * CAS原子性(compare and swap)比较且交换
+ * 显式锁(Lock)与AQS
  */
 public class DBPool {
 

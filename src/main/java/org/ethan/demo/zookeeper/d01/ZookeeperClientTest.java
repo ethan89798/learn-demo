@@ -10,6 +10,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * 简单的zookeeper使用
+ */
 public class ZookeeperClientTest {
     private static Logger logger = LoggerFactory.getLogger(ZookeeperClientTest.class);
 
@@ -17,7 +20,7 @@ public class ZookeeperClientTest {
      * 连接zookeeper
      */
     private static ZooKeeper getZookeeperClient(String host) throws IOException {
-        ZooKeeper zk = new ZooKeeper("192.168.0.186", 5000, (we) -> {
+        ZooKeeper zk = new ZooKeeper("192.168.1.210", 5000, (we) -> {
             logger.info("WatchedEvent = {}" + we);
         });
         return zk;
@@ -100,11 +103,11 @@ public class ZookeeperClientTest {
 
         String path = "/myFirstPath";
         ZooKeeper zk = getZookeeperClient("192.168.0.186");
-//        setPathValue(zk, path, "TEST TEST".getBytes());
+        setPathValue(zk, path, "TEST TEST".getBytes());
 //        getPathData(zk, path);
-        getChildren(zk, path);
+//        getChildren(zk, path);
 
-        delete(zk, path);
+//        delete(zk, path);
 
 //        final CountDownLatch latch = new CountDownLatch(1);
 //        ZooKeeper zk = new ZooKeeper("192.168.0.186", 5000, (we) -> {
