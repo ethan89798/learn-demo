@@ -12,7 +12,7 @@
     1) 基本可用:当系统出现不可预见的故障时,允许部分功能不可用,保障系统的基本可用;
     2) 软状态:允许系统中的数据存在中间状态,即系统的不同节点的数据副本之前的数据同步过程存在的延时,并认为这种延时不会影响到系统可用性
     3) 最终一致性:所有的数据在经过一段时间的数据同步后,最终能达到一个一致的状态
-4.分布式环境协调和通信到底有什么场景
+4. 分布式环境协调和通信到底有什么场景
     1) 数据发布订阅
     2) 负载均衡
     3) 命名服务(生成订单ID)
@@ -21,6 +21,57 @@
     6) 配置管理
     7) 分布式队列
     8) 分布式锁
+5. Zookeeper常用命令
+    1) 创建节点
+        create [-s] [-e] path data acl
+        -s 表示是顺序节点
+        -e 标识是临时节点
+        path 节点路径
+        data 节点数据
+        acl 节点权限
+    2) 更新节点(修改当前节点的数据内容,如果指定版本,需要和当前节点的数据版本一致)
+        set path data [version]
+        path 节点路径
+        data 节点数据
+        version 版本号
+    3) 删除节点
+        delete path / deleteall path / rmr path (deleteall/rmr递归删除)       
+        path 节点路径
+    4) 查询节点数据
+        get path
+        path 节点路径
+    5) 查看节点权限
+        getAcl path
+        path 路径
+    6) 修改节点权限
+        setAcl path scheme:name:password:permission
+        path 路径
+        scheme(world,auth,digest,ip)
+            world 默认的方式,任何人都可以访问
+            auth  代表认证通过的用户才可以访问
+            digest 也是需要认证才能访问,但密码是要加密的(BASE64(SHA1(password)))
+            ip 限制连接的IP
+        id 用户(anyone/admin/)
+        permission
+            cdrwa
+            create(c) : 是否有创建节点的权限
+            delete(d) : 是否有删除节点的权限
+            read(r)   : 是否有读取数据的权限
+            write(w)  : 是否有修改节点数据的权限
+            admin(a)  : 是否有给子节点设置权限的权力
+            
+    addauth digest user1:123456<======>给当前的会话增加了一个user1而且密码是123456的权限
+    7) 四字命令
+        使用4个字母配合nc测试或查看某些zookeeper服务信息
+    
+6. zookeeper客户端
+    1) zookeeper
+    2) curator
+    3) zkClient
+     
+           
+    
+
 
 服务雪崩
 服务隔离(接口之间不能影响)
