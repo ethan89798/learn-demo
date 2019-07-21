@@ -2,6 +2,10 @@ package org.ethan.demo.pattern.simplefactory;
 
 public class SimpleFactoryPattern {
 
+    public static void main(String[] args) {
+        System.out.println(SimpleFactoryPattern.getFuirt(type_apple));
+    }
+
     /**
      * 方式一:
      *   简单,但是使用者要对源码或实现有一定的了解,并且要清楚知道哪个类型所对应该的对象是什么

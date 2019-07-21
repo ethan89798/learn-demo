@@ -38,7 +38,8 @@ dependencies {
             "ch.qos.logback:logback-core:1.2.3",
             "ch.qos.logback:logback-classic:1.2.3",
             "org.apache.curator:curator-framework:4.0.0",
-            "com.101tec:zkclient:0.10"
+            "com.101tec:zkclient:0.10",
+            "org.apache.tomcat.maven:tomcat7-maven-plugin:2.2"
     )
     compile ("org.apache.storm:storm-core:1.2.2") {
         exclude group: "org.slf4j"
